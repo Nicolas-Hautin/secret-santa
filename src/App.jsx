@@ -51,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto">
       <div>
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
@@ -78,7 +78,7 @@ export default function App() {
         {currentScreen === "assignments" && (
           <>
             <h2 className="text-2xl font-bold mb-6 text-center">
-              Attributions des cadeaux
+              Attributions des cadeaux Test
             </h2>
             <AssignmentDisplay assignments={assignments} />
             <div className="mt-6">

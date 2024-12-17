@@ -9,11 +9,21 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+
+}
+
+@font-face{
+  font-family: 'LastChristmas';
+  src: url('/fonts/LastChristmas.otf') format('woff');
+  font-weight: normal;
+  font-size: normal;
+}
+
+:root{
+  --font-family: 'LastChristmas', sans-serif;
+  --color-test: #2C211E;
+}
+
+.h1{
+  font-family: var(--font-family);
 }
