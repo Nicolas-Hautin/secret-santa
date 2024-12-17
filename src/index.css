@@ -27,3 +27,58 @@
 .h1{
   font-family: var(--font-family);
 }
+.button-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 30px; /* Coins arrondis */
+  background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond avec opacité */
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  padding-right: 60px;
+  padding-left: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Cercle avec SVG (position initiale à gauche) */
+.button-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -50px; /* Hors de vue à gauche */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff; /* Couleur du cercle */
+  background-image: url('/fleche.svg'); /* Utilisation du fichier SVG */
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 12px; /* Taille du SVG */
+  transform: translateY(-50%);
+  transition: left 0.5s ease-in-out; /* Animation fluide */
+}
+
+/* Animation du cercle vers la droite */
+.button-container:hover::before {
+  left: calc(100% - 40px); /* Cercle positionné à droite */
+}
+
+/* Animation légère sur le fond */
+.button-container:hover {
+  background-color: rgba(139, 43, 43, 0.5); /* Changement de couleur avec opacité */
+}
+
+
+.bottom-left-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  width: 500px;
+}
