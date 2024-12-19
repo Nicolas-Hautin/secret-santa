@@ -58,29 +58,36 @@ export default function App() {
         )}
         
         {currentScreen === "input" && (
-          < div className="text-center space-y-6 bg-[var(--color-test)] text-white h-screen max-h-screen flex flex-col justify-between py-16 items-center overflow-y-hidden	sm:mx-auto">
-           
-            <ParticipantInput
-              onAddParticipant={addParticipant}
-              participants={participants}
-              onRemoveParticipant={removeParticipant}
-            />
-            <div className="mt-6">
-              <button className="button w-full" onClick={distributeGifts}>
-                Distribuer les cadeaux
-              </button>
-            </div>
-          </div>
-        )}
+  <div
+  className="text-center bg-[#2D1C18] text-white h-screen flex flex-col justify-between py-16 items-center sm:mx-auto "
+>
+
+
+  <ParticipantInput
+    onAddParticipant={addParticipant}
+    participants={participants}
+    onRemoveParticipant={removeParticipant}
+  />
+
+<button
+  className="flex justify-center items-center px-6 pt-12 bg-red-700 text-white rounded-full hover:bg-red-800 transition-transform transform hover:scale-110 shadow-lg button-container whitespace-nowrap"
+  onClick={distributeGifts}
+>
+  Distribuer les cadeaux
+</button>
+</div>
+)}
         {currentScreen === "assignments" && (
-          < div className="bg-[#2D1C18]">
- 
+          < div className="text-center bg-[#2D1C18] text-white h-screen flex flex-col justify-between py-16 items-center sm:mx-auto">
+
             <AssignmentDisplay assignments={assignments} />
             
-              <button  className="button-container" onClick={resetApp}>
-                Recommencer
-              </button>
-        
+            <button
+    className="button-container w-48 px-6 py-3 bg-red-700 rounded-full text-white hover:bg-red-800 transition-transform transform hover:scale-105"
+    onClick={resetApp}
+  >
+    Recommencer
+  </button>
           </div>
         )}
       </div>
