@@ -38,7 +38,7 @@ export function ParticipantInput({
           Ajouter
         </button>
       </div>
-      // Liste des participants ajoutés
+
       <ul className="space-y-2">
         {participants.map((name, index) => (
           <li key={index} className="list-item">

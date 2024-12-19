@@ -24,8 +24,8 @@ export default function App() {
   // Fonction pour distribuer les cadeaux
   const distributeGifts = () => {
     // S'il n'y a pas assez de participants, on affiche une alerte
-    if (participants.length < 3) {
-      alert("Il faut au moins 3 participants pour faire un Secret Santa !");
+    if (participants.length < 2) {
+      alert("Il faut au moins 2 participants pour faire un Secret Santa !");
       return;
     }
 
@@ -58,10 +58,8 @@ export default function App() {
         )}
         
         {currentScreen === "input" && (
-          <>
-            <h2 className="text-2xl font-bold mb-6 text-center">
-              Ajoutez les participants
-            </h2>
+          < div className="text-center space-y-6 bg-[var(--color-test)] text-white h-screen max-h-screen flex flex-col justify-between py-16 items-center overflow-y-hidden	sm:mx-auto">
+           
             <ParticipantInput
               onAddParticipant={addParticipant}
               participants={participants}
@@ -72,9 +70,8 @@ export default function App() {
                 Distribuer les cadeaux
               </button>
             </div>
-          </>
+          </div>
         )}
-       
         {currentScreen === "assignments" && (
           < div className="bg-[#2D1C18]">
  
