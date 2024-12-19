@@ -98,7 +98,7 @@ export function ParticipantInput({
       <img
         src="./participant.png"
         alt=""
-        className="absolute -bottom-10 object-cover"
+        className="absolute bottom-0 object-cover"
       />
     </div>
   );
