@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Snowfall from "react-snowfall";
 
 export function AssignmentDisplay({ assignments }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,6 +18,7 @@ export function AssignmentDisplay({ assignments }) {
   const currentAssignment = assignments[currentIndex];
 
   return (
+    <Snowfall>
     <div className="flex flex-col items-center bg-[#2D1C18] text-white h-screen py-10">
       <h1 className="text-4xl font-bold mb-6">Attributions des cadeaux</h1>
 
@@ -52,5 +54,6 @@ export function AssignmentDisplay({ assignments }) {
         />
       </div>
     </div>
+    </Snowfall>
   );
 }
