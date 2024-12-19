@@ -14,13 +14,13 @@
 
 @font-face{
   font-family: 'LastChristmas';
-  src: url('/fonts/LastChristmas.otf') format('woff');
+  src: url('/fonts/LastChristmas.otf') format('opentype');
   font-weight: normal;
   font-size: normal;
 }
 
-:root{
-  --font-family: 'LastChristmas', sans-serif;
+@theme{
+  --font-base: 'LastChristmas', sans-serif;
   --color-test: #2C211E;
 }
 
